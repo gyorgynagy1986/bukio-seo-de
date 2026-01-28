@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import Logo from '../public/logo.png'
+import Image from "next/image";
 
 interface HeaderProps {
   mobileMenuOpen: boolean;
@@ -22,14 +24,10 @@ export function Header({ mobileMenuOpen, setMobileMenuOpen }: HeaderProps) {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded bg-primary">
-            <span className="font-serif text-lg font-medium text-primary-foreground">
-              B
-            </span>
+          <div className="flex h-8 w-8 items-center justify-center rounded ">
+          <Image src={Logo} alt="bukio logo"></Image>
           </div>
-          <span className="font-serif text-xl tracking-tight text-foreground">
-            Bukio
-          </span>
+        
         </Link>
 
         <div className="hidden items-center gap-8 lg:flex">
